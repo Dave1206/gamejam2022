@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         characterController = gameObject.GetComponent<CharacterController>();
         animator = gameObject.GetComponent<Animator>();
 
-        moveSpeed = 4f;
+        moveSpeed = 6f;
         gravity = 0.5f;
 		
 	}
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         v_movement = characterController.transform.forward * inputZ;
 
-        characterController.transform.Rotate(Vector3.up * inputX * (100f * Time.deltaTime));
+        characterController.transform.Rotate(Vector3.up * inputX * (250f * Time.deltaTime));
 
         characterController.Move(v_movement * moveSpeed * Time.deltaTime);
         characterController.Move(v_velocity);
